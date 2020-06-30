@@ -20,7 +20,7 @@ PhanSo* thuongPhanSo(PhanSo *phanso1, PhanSo *phanso2);
 void xuatThuongPhanSo(PhanSo *phanso1, PhanSo *phanso2);
 void doidauPhanSo(PhanSo *phanso);
 float tinhPhanso(PhanSo *phanso);
-void sosanh(PhanSo *phanso1, PhanSo *phanso2);
+int sosanh(PhanSo *phanso1, PhanSo *phanso2);
 int main()
 {
     PhanSo *phanso1, *phanso2, *phanso;
@@ -143,21 +143,22 @@ float tinhPhanSo(PhanSo *phanso)
 {
 	return (float)phanso->tu / phanso->mau;
 }
-void sosanh(PhanSo *phanso1, PhanSo *phanso2)
+int sosanh(PhanSo *phanso1, PhanSo *phanso2)
 {
 	float a = ab(phanso1);
 	float b = ab(phanso2);
 	if (a > b)
 	{
-		printf("\nphanso1> phanso2-.-",a,b);
+		return a;
 	}
 	else if (a < b)
 	{
-		printf("\nphanso1 < phanso2 -.-");
+		return b;
 	}
 	else
 	{
-		printf("\nphanso1 = phanso2 -_-");
+		return a;
 	}
+	return 0;
 }
 
