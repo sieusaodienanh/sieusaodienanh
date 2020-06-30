@@ -18,8 +18,8 @@ PhanSo* tichPhanSo(PhanSo *phanso1, PhanSo *phanso2);
 void xuatTichPhanSo(PhanSo *phanso1, PhanSo *phanso2);
 PhanSo* thuongPhanSo(PhanSo *phanso1, PhanSo *phanso2);
 void xuatThuongPhanSo(PhanSo *phanso1, PhanSo *phanso2);
-void doidauPS(PhanSo *phanso);
-float tinhPS(PhanSo *phanso);
+void doidauPhanSo(PhanSo *phanso);
+float tinhPhanso(PhanSo *phanso);
 void sosanh(PhanSo *phanso1, PhanSo *phanso2);
 int main()
 {
@@ -132,14 +132,14 @@ void xuatThuongPhanSo(PhanSo *phanso1, PhanSo *phanso2)
     // xuat phan so
     xuatPhanSo(thuong);
 }
-void doidauPS(PhanSo *phanso)
+void doidauPhanSo(PhanSo *phanso)
 {
 	if(phanso < 0){
 		phanso->tu = -(phanso->tu);
 		phanso->mau = -(phanso->mau);
 	}
 }
-float tinhPS(PhanSo *phanso)
+float tinhPhanSo(PhanSo *phanso)
 {
 	return (float)phanso->tu / phanso->mau;
 }
